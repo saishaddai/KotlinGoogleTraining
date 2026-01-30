@@ -19,7 +19,7 @@ package com.saishaddai
  */
 
 fun main() {
-    val celsiusToFahrenheit : (Double) -> Double = { c -> ((9/5) * c ) + 32 }
+    val celsiusToFahrenheit : (Double) -> Double = { c -> ((1.8) * c ) + 32 }
 
     printFinalTemperature(initialMeasurement = 27.0,
         initialUnit = "Celsius",
@@ -33,7 +33,7 @@ fun main() {
         finalUnit = "Celsius",
         conversionFormula = kelvinToCelsius)
 
-    val fahrenheitToKelvin : (Double) -> Double = { f -> ((5/9) * (f - 32)) + 273.15 }
+    val fahrenheitToKelvin : (Double) -> Double = { f -> ((f + 459.67) * 5) / 9}
 
     printFinalTemperature(initialMeasurement = 10.0,
         initialUnit = "Fahrenheit",
