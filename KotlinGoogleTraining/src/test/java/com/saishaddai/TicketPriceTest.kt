@@ -7,7 +7,7 @@ class TicketPriceTest {
     val child = 5
     val adult = 28
     val senior = 87
-    val unreal  = 99
+    val unreal  = 999
 
     @Test
     fun test_ticketPriceChild() {
@@ -43,6 +43,15 @@ class TicketPriceTest {
     fun test_ticketPriceSeniorMonday() {
         val resultSenior = ticketPrice(senior, true)
         assertEquals(20, resultSenior)
+    }
+
+    @Test
+    fun test_ticketPriceUnrealAge() {
+        var resultUnreal = ticketPrice(unreal, false)
+        assertEquals(1, resultUnreal)
+
+        resultUnreal = ticketPrice(unreal, true)
+        assertEquals(1, resultUnreal)
     }
 
 }

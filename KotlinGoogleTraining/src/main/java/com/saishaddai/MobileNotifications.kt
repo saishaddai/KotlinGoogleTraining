@@ -18,9 +18,9 @@ fun main() {
 }
 
 
-fun printNotificationSummary(numberOfMessages: Int) {
-    when {
-        numberOfMessages <= 99 -> { println("You have $numberOfMessages notifications.") }
-        else -> { println("Your phone is blowing up! You have 99+ notifications.") }
+fun printNotificationSummary(numberOfMessages: Int) : String{
+    return when {
+        numberOfMessages <= 99 -> { "You have $numberOfMessages notifications." }
+        else -> { "Your phone is blowing up! You have 99+ notifications." }
     }
 }

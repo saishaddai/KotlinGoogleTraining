@@ -44,4 +44,4 @@ fun ticketPrice(age: Int, isMonday: Boolean): Int {
     }
 }
 
-private fun Int.getPrice(isMonday : Boolean) = if (isMonday) this - 5 else this
+private fun Int.getPrice(isMonday: Boolean) = if (isMonday) this - 5 else this
