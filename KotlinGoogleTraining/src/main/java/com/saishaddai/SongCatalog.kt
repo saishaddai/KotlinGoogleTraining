@@ -11,12 +11,13 @@ package com.saishaddai
  * "Title, performed by artist, was released in [year published]."
  */
 
-data class Song (
-    val title : String,
+data class Song(
+    val title: String,
     val artist: String,
-    val yearPublished : Int,
+    val yearPublished: Int,
     val playCount: Int,
-    val popular: Boolean = playCount > 999)
+    val popular: Boolean = playCount > 999
+)
 
 fun main() {
     Song(
